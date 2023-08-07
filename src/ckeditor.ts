@@ -8,10 +8,7 @@ import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
 import { Autoformat } from '@ckeditor/ckeditor5-autoformat';
 import { Bold, Italic, Underline } from '@ckeditor/ckeditor5-basic-styles';
 import { BlockQuote } from '@ckeditor/ckeditor5-block-quote';
-import { CKBox } from '@ckeditor/ckeditor5-ckbox';
 import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
-import { Comments } from '@ckeditor/ckeditor5-comments';
-import { TableOfContents } from '@ckeditor/ckeditor5-document-outline';
 import { Essentials } from '@ckeditor/ckeditor5-essentials';
 import { FindAndReplace } from '@ckeditor/ckeditor5-find-and-replace';
 import { FontBackgroundColor, FontColor, FontFamily, FontSize } from '@ckeditor/ckeditor5-font';
@@ -25,8 +22,7 @@ import {
 	ImageResize,
 	ImageStyle,
 	ImageToolbar,
-	ImageUpload,
-	PictureEditing
+	ImageUpload
 } from '@ckeditor/ckeditor5-image';
 import { Indent, IndentBlock } from '@ckeditor/ckeditor5-indent';
 import { Link, LinkImage } from '@ckeditor/ckeditor5-link';
@@ -55,8 +51,6 @@ import {
 	TableProperties,
 	TableToolbar
 } from '@ckeditor/ckeditor5-table';
-import { Template } from '@ckeditor/ckeditor5-template';
-import { TrackChanges } from '@ckeditor/ckeditor5-track-changes';
 import { TextTransformation } from '@ckeditor/ckeditor5-typing';
 import { WordCount } from '@ckeditor/ckeditor5-word-count';
 
@@ -68,9 +62,7 @@ class Editor extends ClassicEditor {
 		Autoformat,
 		BlockQuote,
 		Bold,
-		CKBox,
 		CloudServices,
-		Comments,
 		Essentials,
 		FindAndReplace,
 		FontBackgroundColor,
@@ -98,7 +90,6 @@ class Editor extends ClassicEditor {
 		PageBreak,
 		Paragraph,
 		PasteFromOffice,
-		PictureEditing,
 		SelectAll,
 		ShowBlocks,
 		SourceEditing,
@@ -112,12 +103,9 @@ class Editor extends ClassicEditor {
 		TableCaption,
 		TableCellProperties,
 		TableColumnResize,
-		TableOfContents,
 		TableProperties,
 		TableToolbar,
-		Template,
 		TextTransformation,
-		TrackChanges,
 		Underline,
 		WordCount
 	];
@@ -147,7 +135,6 @@ class Editor extends ClassicEditor {
 		language: 'en',
 		image: {
 			toolbar: [
-				'comment',
 				'imageTextAlternative',
 				'toggleImageCaption',
 				'imageStyle:inline',
@@ -163,20 +150,7 @@ class Editor extends ClassicEditor {
 				'mergeTableCells',
 				'tableCellProperties',
 				'tableProperties'
-			],
-			tableToolbar: [
-				'comment'
 			]
-		},
-		comments: {
-			editorConfig: {
-				extraPlugins: [
-					Autoformat,
-					Bold,
-					Italic,
-					List
-				]
-			}
 		}
 	};
 }
