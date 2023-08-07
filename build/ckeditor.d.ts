@@ -34,6 +34,7 @@ declare class Editor extends ClassicEditor {
     static defaultConfig: {
         toolbar: {
             items: string[];
+            shouldNotGroupWhenFull: boolean;
         };
         language: string;
         image: {
