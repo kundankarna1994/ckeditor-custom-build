@@ -5,6 +5,7 @@
 
 import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
 
+import { Alignment } from '@ckeditor/ckeditor5-alignment';
 import { Autoformat } from '@ckeditor/ckeditor5-autoformat';
 import { Bold, Italic, Underline } from '@ckeditor/ckeditor5-basic-styles';
 import { BlockQuote } from '@ckeditor/ckeditor5-block-quote';
@@ -59,6 +60,7 @@ import { WordCount } from '@ckeditor/ckeditor5-word-count';
 
 class Editor extends ClassicEditor {
 	public static override builtinPlugins = [
+		Alignment,
 		Autoformat,
 		BlockQuote,
 		Bold,
@@ -120,14 +122,16 @@ class Editor extends ClassicEditor {
 				'link',
 				'bulletedList',
 				'numberedList',
+				'horizontalLine',
+				'fontSize',
+				'fontFamily',
+				'fontColor',
+				'specialCharacters',
 				'|',
+				'alignment',
 				'outdent',
 				'indent',
 				'|',
-				'imageUpload',
-				'blockQuote',
-				'insertTable',
-				'mediaEmbed',
 				'undo',
 				'redo'
 			]
