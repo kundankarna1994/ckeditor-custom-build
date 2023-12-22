@@ -11,7 +11,6 @@ import { Bold, Italic } from '@ckeditor/ckeditor5-basic-styles';
 import { BlockQuote } from '@ckeditor/ckeditor5-block-quote';
 import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
 import { Essentials } from '@ckeditor/ckeditor5-essentials';
-import {  FontColor, FontFamily, FontSize } from '@ckeditor/ckeditor5-font';
 import { Heading } from '@ckeditor/ckeditor5-heading';
 
 import { HorizontalLine } from '@ckeditor/ckeditor5-horizontal-line';
@@ -32,10 +31,6 @@ import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
 import { PasteFromOffice } from '@ckeditor/ckeditor5-paste-from-office';
 
 import {
-	SpecialCharacters,
-	SpecialCharactersArrows,
-} from '@ckeditor/ckeditor5-special-characters';
-import {
 	Table,
 	TableToolbar
 } from '@ckeditor/ckeditor5-table';
@@ -53,9 +48,6 @@ class Editor extends ClassicEditor {
 		Bold,
 		CloudServices,
 		Essentials,
-		FontColor,
-		FontFamily,
-		FontSize,
 		Heading,
 		HorizontalLine,
 		Image,
@@ -71,8 +63,6 @@ class Editor extends ClassicEditor {
 		MediaEmbed,
 		Paragraph,
 		PasteFromOffice,
-		SpecialCharacters,
-		SpecialCharactersArrows,
 		Table,
 		TableToolbar,
 		TextTransformation,
@@ -89,10 +79,6 @@ class Editor extends ClassicEditor {
 				'bulletedList',
 				'numberedList',
 				'horizontalLine',
-				'fontSize',
-				'fontFamily',
-				'fontColor',
-				'specialCharacters',
 				'|',
 				'alignment',
 				'outdent',
